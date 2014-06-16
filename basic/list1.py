@@ -22,7 +22,21 @@
 # Note: python does not have a ++ operator, but += works.
 def match_ends(words):
   # +++your code here+++
-  return
+ # a = words
+  #def wordsover3()
+  #sorted(a, key=)
+  i = 0
+  for s in words:  
+    #print s
+    #print len(s)
+    #i = i + 1
+    #print 'i=' + str(i)
+    #if the length of s is greater than or equal to 2 then add one to i
+    #(bob == 10 or bob > 10)
+    if (len(s) == 2 or len(s) > 2):
+      if (s[0] == s[-1]): i = i + 1
+    #print 'i=' + str(i) 
+  return i
 
 
 # B. front_x
@@ -34,7 +48,28 @@ def match_ends(words):
 # before combining them.
 def front_x(words):
   # +++your code here+++
-  return
+  #if words begin with "x" then create list and sort by x
+  #if words dont begin with "x" then create list and sort remaining list
+  #join two lists together
+  #i = 0
+  #x = words
+  a = []
+  b = []
+  for s in words:
+    if (s[0] == 'x' or s[0] == 'X'):
+     
+      #print s
+      a.append(s)
+
+      #print a 
+    #if (s[0] != 'x' or s[0] != 'X'):
+    else:
+      b.append(s)
+  c = sorted(a) + sorted(b)
+
+      #print b
+
+  return c
 
 
 
@@ -44,9 +79,28 @@ def front_x(words):
 # e.g. [(1, 7), (1, 3), (3, 4, 5), (2, 2)] yields
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element form each tuple.
+def list_last(s): return s[-1]
+
+  #return
+
 def sort_last(tuples):
   # +++your code here+++
-  return
+  #for billybob in tuples:
+    #print billybob 
+    #a = s[-1]
+    #x = sorted(s, key=a)
+    #c = []
+    #print a
+    #print '-----'
+    #c.append(a)
+    #print sorted(c)
+     
+    #b = sorted(tuples)
+  b = sorted(tuples, key=list_last)
+
+
+
+  return b
 
 
 # Simple provided test() function used in main() to print
